@@ -1,17 +1,13 @@
 # GettingAndCleaningData
 Assignment of Coursera "Getting and Cleaning Data", week 4
 
+# Prerequisites
+Donwload the script in your working directory and make sure the raw data https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip are unpacked within this working directory as well.
 
-
-# working space. 
-The script will perform the following steps
-
-1. Read the relevant data
-2. Read the labels for the x_* data and the translation of the activities
-3. Clean up the labels so they do not contain steering information ()
-4. Add the labels to the train and test data. 
-5. Unstrip the x_* data with the only necessary columns (mean & std)
-6. Gather the subjects, the acitivity and the data together for test and the training
-7. Create one data set by putting test and training data together
-8. Replace the number of the activity by its expression 
-9. Create a data frame with the mean of each variable per subject and activity. The result will be stored in the object "summmary"
+# Description
+Just run the script run_analysis.R. It will perform the followibg steps: 
+- Merges the training and the test sets to create one data set called "data_grouped"
+- This object will contain only the measurements on the mean and standard deviation for each measurement
+- It has descriptive activity names and names for the activities in the data set
+- Appropriately labels the data set with descriptive variable names. 
+- It creates a second data set called "summary" with the mean of all variables grouped by subject and activity
