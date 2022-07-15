@@ -1,6 +1,10 @@
 # Before starting the script make sure that the zip-file was unpacked within your current 
 # working space. 
 
+# Activate the library dplyr
+
+library(dplyr)
+
 # 1. Read the relevant data
 
 x_test <- read.table("./getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset/test/X_test.txt")
@@ -56,7 +60,7 @@ data$Activity[data$Activity == 5] = "STANDING"
 data$Activity[data$Activity == 6] = "LAYING"
 
 # 9. Create a data frame with the mean of each variable per subject and activity
-# The result will be stored in the object "summmary"
+# The result will be stored in the object "summmary"  
 
+data_grouped <- group_by(data, Subject, Activity)
 summary <- summarize_each(data_grouped, mean)
-summary <- summary[, 3:90]
