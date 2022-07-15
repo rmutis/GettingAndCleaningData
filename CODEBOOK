@@ -1,4 +1,4 @@
-The script run_analysis.R will perform the follwoing steps:
+The script run_analysis.R will perform the following steps:
 
 1. Read the relevant data (test data and training data are separate)
 2. Read the labels for the x_* data and the translation of the activities
